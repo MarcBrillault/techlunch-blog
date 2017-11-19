@@ -15,7 +15,7 @@
             </div>
             <div class="card-footer text-muted">
                 Posted on {{ $post->created_at }} by
-                <a href="#">Start Bootstrap</a>
+                {{ $post->user->name }}
             </div>
         </div>
     @endforeach
