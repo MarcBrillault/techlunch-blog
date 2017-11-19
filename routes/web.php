@@ -11,5 +11,9 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
-Route::get('post', 'PostController@index');
+Route::get('/', 'HomeController@index')
+    ->name('home');
+
+Route::get('post/{id}', 'PostController@index')
+    ->where('id', '[0-9]+')
+    ->name('post');

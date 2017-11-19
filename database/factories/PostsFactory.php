@@ -9,9 +9,10 @@ $factory->define(Post::class, function (Faker $faker) {
     $date      = Carbon::createFromTimestamp($timestamp);
 
     return [
-        'title'      => $faker->sentence(rand(2, 4)),
-        'image'      => $faker->image(),
-        'text'       => $faker->sentences(rand(10, 50), true),
+        'title'      => $faker->sentence(rand(1, 3)),
+        'image'      => $faker->image(resource_path('assets/images/TMP')),
+        'lead'       => $faker->sentence(),
+        'text'       => implode(PHP_EOL . PHP_EOL, $faker->sentences(rand(10, 50))),
         'created_at' => $date,
     ];
 });
