@@ -1,4 +1,4 @@
-@extends('dispositions.2col')
+@extends('layouts.2col')
 
 @section('seoTitle')
     {{ $post->title }}

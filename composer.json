@@ -11,6 +11,7 @@
     "php": ">=7.0.0",
     "alfredo-ramos/parsedown-extra-laravel": "^0.7.1",
     "barryvdh/laravel-ide-helper": "^2.4",
+    "brio/helpers": "^1.1",
     "fideloper/proxy": "~3.3",
     "laravel/framework": "5.5.*",
     "laravel/tinker": "~1.0"
