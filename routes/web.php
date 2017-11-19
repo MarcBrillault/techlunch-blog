@@ -17,3 +17,13 @@ Route::get('/', 'HomeController@index')
 Route::get('post/{id}', 'PostController@index')
     ->where('id', '[0-9]+')
     ->name('post');
+
+Route::prefix('images')->group(function () {
+    Route::get('posts/home/{id}.jpg', 'ImageController@postHome')
+        ->where('id', '[0-9]+')
+        ->name('imagePostHome');
+
+    Route::get('posts/{id}.jpg', 'ImageController@post')
+        ->where('id', '[0-9]+')
+        ->name('imagePost');
+});

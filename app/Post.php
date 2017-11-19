@@ -14,4 +14,14 @@ class Post extends Model
     {
         return strCut($this->attributes['text']);
     }
+
+    public function getHomeImageAttribute()
+    {
+        return route('imagePostHome', $this->id);
+    }
+
+    public function getPostImageAttribute()
+    {
+        return route('imagePost', $this->id);
+    }
 }
